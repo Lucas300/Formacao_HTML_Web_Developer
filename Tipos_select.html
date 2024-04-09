@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Selects</title>
+</head>
+<body>
+    <form name="signup" method="get"  onsubmit="alert('Logado');">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label>Cargo: </label>
+        <!--podemos usar o multiple para para deixar o usuario selecionar mais de uma opcao-->
+        <select name="role" id="" >
+            <option disabled value="">Selecione o cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option  selected value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select><br>
+        <label for="">Assunto:</label><br>
+        <input type="text" id="assunto" name="assunto" required><br><br>
+        <p><button type="submit">Enviar</button></p>
+      </form>
+</body>
+</html>
