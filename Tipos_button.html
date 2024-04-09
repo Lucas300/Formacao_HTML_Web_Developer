@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons e seus tipos</title>
+</head>
+<body>
+    <form method="get" onsubmit="alert('Salvo com sucesso');" >
+        <label for="">Name:</label><input type="text" name="name"><br>
+        <label for="">Idade:</label><input type="text" name="idade"><br>
+        <label for="">Password:</label><input type="password" name=""><br>
+        <button type="button" onclick="alert('Cliquei aqui');" onmouseover="alert('passei aqui');">clicavel</button>
+        <!--O reset limpa todos os campos dentro do form-->
+        <button type="reset">Limpar</button>
+        <!--Envia o formulario , podemos usar o evento onsubmit-->
+        <button type="submit">Enviar</button><!--se funciona caso o usuario aperte enter do teclado tambem-->
+    </form>
+
+</body>
+</html>
