@@ -7,18 +7,40 @@
 </head>
 <body>
     <style>
-        table tr:nth-child(even){
-            background-color: azure;
+        table{
+            -webkit-box-shadow: 18px 13px 39px -7px rgba(0,0,0,0.64);
+            -moz-box-shadow: 18px 13px 39px -7px rgba(0,0,0,0.64);
+            box-shadow: 18px 13px 39px -7px rgba(0,0,0,0.64);
+            text-align: center;
         }
+        table thead th{
+            border: solid 1px black;
+            color: wheat;
+            background-color: black;
+        }
+        table tfoot td{
+            background-color: rgb(182, 182, 182);
+        }
+        
+        table tr:nth-child(even) td{
+            background-color: rgb(220, 219, 219);
+        }
+
         table tr:hover td{
-            background-color: beige;
+            background-color: rgb(158, 156, 156);
+            cursor: pointer;
         }
+       
     </style>
-    <table sumary="Esta tabela se refere a idades da turma A da dio" border="1" width="500" align="center" cellpadding="25">
+    <table sumary="Esta tabela se refere a idades da turma A da dio" width="500" align="center" cellpadding="5" cellspacing="0">
         <!--Essa descrição aparece para o usuario ja o sumary não aparece-->
         <caption>Tabela de idades dos alunos Dio.me</caption>
         <!--Cabeçalho,corpo e rodape-->
         <thead>
+            <tr>
+                <!--Mesclando colunas -->
+                <th colspan="2">Minha tabela</th>
+            </tr>
             <tr>
                 <th title="Nome completo">Nome</th>
                 <th title="Idade">Idade</th>
