@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="busca"/>
+    <p id="descricao">O urso polar é um mamífero incrível adaptado às condições extremas do Ártico. Com sua pelagem espessa e camada de gordura, enfrenta temperaturas congelantes. Sua dieta é variada, incluindo focas, peixes e outros animais marinhos. Infelizmente, o aquecimento global e o derretimento do gelo afetam seu habitat e alimentação. Esses majestosos animais estão ameaçados de extinção e precisam de nossa proteção para sobreviver.</p>
+    <script>
+        var searchField = document.getElementById('busca');
+        var descriptionObject = document.getElementById('descricao');
+        var textToSearch = descriptionObject.innerHTML;
+    
+        function realizaBusca(busca) {
+            const regex = new RegExp('(' + busca + '(?!(.(?!<mark>))*<mark>))', 'ig');
+            const ocorrencias = textToSearch.match(regex);
+            descriptionObject.innerHTML = textToSearch.replace(regex, '<mark>$1</mark>');
+            }
+        searchField.addEventListener('input', (e) => realizaBusca(e.target.value));
+    </script>
+</body>
+</html>
